@@ -1,0 +1,2 @@
+SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://quassel:yourpassword@localhost/quassel'
+SECRET_KEY = 'change this to something secret'
