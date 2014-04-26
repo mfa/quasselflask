@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Quasselcore password changer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="local.css") }}">
+  </head>
+  <body>
+    <form method="POST">
+      Username: <input type="text" name="username"></input>{% if error1 %} <span class="error">{{ error1 }}</span>{% endif %}
+      <br>
+      Current Password: <input type="password" name="oldpass"></input>
+      <br>
+      New Password: <input type="password" name="newpass1"></input>{% if error2 %} <span class="error">{{ error2 }}</span>{% endif %}
+      <br>
+      New Password 2: <input type="password" name="newpass2"></input>
+      <br>
+      <input type="submit" value="Update Password"></input>
+    </form>
+    {% if success -%}
+    <div class="success">
+      {{ success }}
+    </div>
+    {%- endif %}
+  </body>
+</html>
